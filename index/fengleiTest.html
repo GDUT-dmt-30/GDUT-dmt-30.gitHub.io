@@ -7,6 +7,7 @@
         body{
             overflow: hidden;
             height: 100%;
+            width: 100%;
             margin: 0;
             padding: 0;
         }
@@ -16,27 +17,40 @@
         }
 
     </style>
-    <script src="js/rainyday.min.js"></script>
+    <script src="js/rainyday.js"></script>
     <script>
         function run() {
             var image = document.getElementById('background');
             image.onload = function () {
                 var engine = new RainyDay({
-                    image: this
+                    image: this,
+                    //sound:"sound/rain.mp3",//声音属性
+                    blur: 20,//背景模糊数值
+                    gravityAngle:Math.PI/2,
+                    gravityAngleVariance:0.00000,//增加重力方差以模拟风效应
+                    gravityThreshold:4,//重力加速度分之一
+                    fps:30
                 });
+                // engine.rain([
+                //     [10, 2, 180]//第一二个参数雨滴及尾迹大小，第三个参数是屏幕上的雨滴数量
+                // ]);
                 engine.rain([
-                    [6, 3, 2]//第一个参数是大小，衍生的大小，第三个参数是速度
-                ], 50);//雨滴下落速度
+                    [3, 6, 3],
+                    [3, 2, 0.88],
+                    [3, 4, 0.9],
+                    // [3, 3, 0.88],
+                    // [5,4,1.0]
+                    //每一个[]里面都是一种雨滴，第一、二个参数是最小雨滴和最大雨滴，第三个参数是出现速度
+                ], 30);//雨滴下落速度
             };
             image.crossOrigin = 'anonymous';
-            image.src = "image/school.jpg";
+            image.src = "img/school.jpg";
         }
 
     </script>
 </head>
 <body onload="run();">
-<!--//alt是浏览器显示不了图片显示的图片替代文字-->
-    <img id="background" alt="background" src="" />
-	
+    <img id="background" alt="加载失败" src="" />
+    <!--//alt是浏览器显示不了图片显示的图片替代文字-->
 </body>
 </html>
