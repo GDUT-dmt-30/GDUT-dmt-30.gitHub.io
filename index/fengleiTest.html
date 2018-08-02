@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>广州夜雨</title>
+    <style media="screen">
+        body{
+            overflow: hidden;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+    <script src="js/rainyday.min.js"></script>
+    <script>
+        function run() {
+            var image = document.getElementById('background');
+            image.onload = function () {
+                var engine = new RainyDay({
+                    image: this
+                });
+                engine.rain([
+                    [6, 3, 2]//第一个参数是大小，衍生的大小，第三个参数是速度
+                ], 50);//雨滴下落速度
+            };
+            image.crossOrigin = 'anonymous';
+            image.src = "image/school.jpg";
+        }
+
+    </script>
+</head>
+<body onload="run();">
+<!--//alt是浏览器显示不了图片显示的图片替代文字-->
+    <img id="background" alt="background" src="" />
+	
+</body>
+</html>
