@@ -377,10 +377,10 @@
                     <div class="tabs-content">
                         <div class="wrapper">
                             <ul class="tabs clearfix" data-tabgroup="first-tab-group">
-                              <li><a href="#tab1" class="active">2018 7月</a></li>
-                              <li><a href="#tab2">2018 6月</a></li>
-                              <li><a href="#tab3">2018 5月</a></li>
-                              <li><a href="#tab4">2018 4月</a></li>
+                              <li><a href="#tab1" class="active">2018 8月</a></li>
+                              <li><a href="#tab2">2018 7月</a></li>
+                              <li><a href="#tab3">2018 6月</a></li>
+                              <li><a href="#tab4">2018 5月</a></li>
                             </ul>
                             <section id="first-tab-group" class="tabgroup">
                                 <div id="tab1">
@@ -397,6 +397,23 @@
                                                         内容不断丰富.而现在，
                                                         我正在建设我的网站的基础，
                                                         不夸张的说这将来一段时间内都是我个人网站的样子了</p>
+                                                    <div class="accent-button button">
+                                                        <a href="#">浏览...</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_1.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>制作好了联系我的数据传输</h4>
+                                                    <span>2018 8月 22日</span>
+                                                    <p>这个是转后台以来一直想做的事情，
+                                                        前段时间因为一直在看thinkPHP的视频，
+                                                        所以把远程连接mysql数据库的事情搁置了下来。
+                                                        今天弄好了连接远程数据库的工作之后也顺带实际操作了一把前端接后台数据库的操作，
+                                                        但是这个暂时还只能发送数据，还没有添加加入数据的交互。</p>
                                                     <div class="accent-button button">
                                                         <a href="#">浏览...</a>
                                                     </div>
@@ -544,7 +561,7 @@
                         
                     </div>
                     <div class="section-content">
-                        <form  action="#" method="post" >
+                        <form  action="php/server.php" method="post" >
                             <div class="row">
                                 <div class="col-md-4">
                                   <fieldset>
@@ -558,17 +575,17 @@
                                 </div>
                                  <div class="col-md-4">
                                   <fieldset>
-                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="建议..." required="">
+                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="建议的主题..." required="">
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="你的联系方式..." required></textarea>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="建议的具体内容..." required></textarea>
                                   </fieldset>
                                 </div>
                                 <div class="col-md-12">
                                   <fieldset>
-                                    <button type="submit" id="form-submit" class="btn">立即发送</button>
+                                    <button type="submit" id="form-submit" class="btn"><a href="php/server.php">立即发送</a></button>
                                   </fieldset>
                                 </div>
                             </div>

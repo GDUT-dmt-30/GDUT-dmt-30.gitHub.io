@@ -13,7 +13,7 @@
         }
         img{
             width: 100%;
-            height: 100%;
+            /*height: 100%;*/
         }
 
     </style>
@@ -45,8 +45,11 @@
             };
             image.crossOrigin = 'anonymous';
             image.src = "image/rainBack.jpg";
+            image.width = window.innerWidth;
+            image.height = window.innerHeight;
         }
-
+		
+		
     </script>
 </head>
 <body onload="run();">
